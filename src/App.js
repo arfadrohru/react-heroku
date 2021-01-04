@@ -7,6 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>React Heroku</h1>
+        <h1>Cek Commit</h1>
       </header>
     </div>
   );
