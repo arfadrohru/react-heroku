@@ -18,7 +18,7 @@ axios.get('https://deploy-springboot-heroku.herokuapp.com/api/user').then(res =>
     render() {
         return (
             <div>
-                <h1>{this.state.nama}</h1>
+                <h1>Get Name From Heroku Spring Boot : {this.state.nama}</h1>
             </div>
         )
     }
