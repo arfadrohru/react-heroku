@@ -5,7 +5,8 @@ export default class User extends Component {
     constructor(){
         super()
         this.state ={
-            user : {}
+            user : {},
+            file:'',
         }
     }
     componentDidMount(){
@@ -17,8 +18,24 @@ export default class User extends Component {
          })
         console.log(data);
         console.log(data.Messeage);
-})
+    })
     }
+
+    handleFile(file){
+    let file = file.target.value
+    this.setState({
+        file: file
+    })
+    }
+
+    postFile(){
+        let file = this.state.file
+        const postUrl ='https://deploy-springboot-heroku.herokuapp.com/upload'
+        const fd = new FormData()
+        fd.append("file", file)
+        axios.post(postUrl,fd)
+    }
+
     render() {
         return (
             <div>
@@ -26,6 +43,9 @@ export default class User extends Component {
                 <p>name : {this.state.user.name}</p>
                 <p>email : {this.state.user.email}</p>
                 <p>age : {this.state.user.age}</p>
+                <label>Uplaod File</label>
+                <input type="file" onChange={(file)=>this.handleFile(file)}/>
+                <button onClick={this.postFile()}>Upload</button>
             </div>
         )
     }
