@@ -33,7 +33,9 @@ export default class User extends Component {
         const postUrl ='https://deploy-springboot-heroku.herokuapp.com/upload'
         const fd = new FormData()
         fd.append("file", file)
-        axios.post(postUrl,fd)
+        axios.post(postUrl,fd).then(
+            console.log("Done");
+        )
     }
 
     render() {
