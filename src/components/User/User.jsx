@@ -11,15 +11,14 @@ export default class User extends Component {
     componentDidMount(){
 axios.get('https://deploy-springboot-heroku.herokuapp.com/api/user').then(res =>{
     this.setState({
-        user: res.data.user
+        nama: res.data.user
     })
-    console.log(res)
 })
     }
     render() {
         return (
             <div>
-                <h1>Nama : {this.state.nama}</h1>
+                <h1>{this.state.nama}</h1>
             </div>
         )
     }
