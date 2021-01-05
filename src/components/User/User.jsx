@@ -9,13 +9,14 @@ export default class User extends Component {
         }
     }
     componentDidMount(){
-axios.get('https://deploy-springboot-heroku.herokuapp.com/api/read?id=1').then(res =>{
-    let data = res.data
-    this.setState({
-        user: data.Message
-    })
-    console.log(data);
-    console.log(data.Message);
+        const getUrl ='https://deploy-springboot-heroku.herokuapp.com/api/read?id=1'
+        axios.get(getUrl).then(res =>{
+         let data = res.data
+        this.setState({
+            user: data.Messeage
+         })
+        console.log(data);
+        console.log(data.Messeage);
 })
     }
     render() {
