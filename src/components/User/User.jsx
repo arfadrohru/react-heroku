@@ -45,7 +45,7 @@ export default class User extends Component {
                 <p>name : {this.state.user.name}</p>
                 <p>email : {this.state.user.email}</p>
                 <p>age : {this.state.user.age}</p>
-                <label>Uplaod File </label>
+                <label>Uplaod File  </label>
                 <input type="file" onChange={(fileupload)=>this.handleFile(fileupload)}/>
                 <button onClick={this.postFile()}>Upload</button>
             </div>
