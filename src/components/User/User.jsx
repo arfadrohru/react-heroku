@@ -21,8 +21,8 @@ export default class User extends Component {
     })
     }
 
-    handleFile(file){
-    let file = file.target.value
+    handleFile(fileupload){
+    let file = fileupload.target.value
     this.setState({
         file: file
     })
@@ -44,7 +44,7 @@ export default class User extends Component {
                 <p>email : {this.state.user.email}</p>
                 <p>age : {this.state.user.age}</p>
                 <label>Uplaod File</label>
-                <input type="file" onChange={(file)=>this.handleFile(file)}/>
+                <input type="file" onChange={(fileupload)=>this.handleFile(fileupload)}/>
                 <button onClick={this.postFile()}>Upload</button>
             </div>
         )
