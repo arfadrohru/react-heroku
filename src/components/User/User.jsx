@@ -34,7 +34,7 @@ export default class User extends Component {
         const fd = new FormData()
         fd.append("file", file)
         axios.post(postUrl,fd).then(
-            console.log("Done");
+            console.log("Done")
         )
     }
 
