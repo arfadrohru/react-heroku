@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import User from './components/User/User';
 
 function App() {
   return (
@@ -7,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>React Heroku</h1>
-        <h1>Cek Commit</h1>
+       <User/>
       </header>
     </div>
   );
